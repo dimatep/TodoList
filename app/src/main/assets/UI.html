@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- import jQuery scripts -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css"/>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+    <script type="text/javascript" src="functions.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>UI</title>
+</head>
+<body>
+    <!-- main page -->
+    <div data-role="page" id="main_page">
+        <div data-role="header">
+            <h1>Manage Your Tasks</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <p id="motto">The Best Tool To Manage Your Tasks</p>
+            <!-- two button to another pages -->
+            <p><a href="#add" data-role="button" data-rel="dialog" data-icon="plus" data-transition="pop">Add Todo Task</a></p>
+            <p><a href="#itemlist" data-role="button" data-icon="grid">Check Todo List</a></p>
+            <p id="creators">Dima Tepliakov and Michael Rozentsveig</p>
+            <p id="course-name">Android Mobile Course - Michael Haim</p>
+        </div>
+    </div> <!-- /end of main page -->
+
+    <!-- add page -->
+    <div data-role="page" id="add">
+        <div data-role="header">
+            <h1>Add Todo Item</h1>
+        </div>
+        <div>
+            <label>Task:</label>
+            <input type="text" name="new_item" id="new_item"/>
+            <label>Deadline Date:</label>
+            <input type="date" name="new_date" id="new_date"/>
+            <a onclick="add()" href="#main_page" data-role="button" data-icon="plus" data-theme="b">Add Task</a>
+        </div>
+    </div> <!-- /end of add task page -->
+
+    <!-- update page -->
+    <div data-role="page" id="update">
+        <div data-role="header">
+            <a data-rel="back" data-role="button" data-icon="arrow-l">Back to list</a>
+            <h1>Update Task</h1>
+        </div>
+        <div data-rel="dialog">
+            <label>Task:</label>
+            <input type="text" name="update_item" id="newNameValue"/>
+            <label>Deadline Date:</label>
+            <input type="date" name="update_date" id="newDateValue"/>
+            <a id="updateButton" href="#itemlist" data-role="button" data-icon="refresh" data-theme="b">Update This Task</a>
+        </div>
+    </div><!-- /end of update task page -->
+
+    <!-- list with all the tasks page -->
+    <div data-role="page" id="itemlist">
+        <div data-role="header">
+            <a data-rel="back" data-role="button" data-icon="arrow-l">Back to Menu</a>
+            <h1>Todo List</h1>
+        </div>
+        <div data-role="content">
+            <!-- TODO LIST -->
+            <ul id="todoList" data-role="listview"  data-filter="true">
+                <!-- add javascript functions -->
+                <script>
+                    getListView()
+                </script>
+            </ul>
+        </div>
+    </div><!-- /end of todo list -->
+
+</body>
+</html>

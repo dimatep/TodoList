@@ -1,0 +1,27 @@
+#add label{
+    color:white;
+}
+
+#update label{
+    font-weight:bold;
+}
+
+#motto{
+    color:black;
+    font-weight:bold;
+    font-size:20px;
+}
+
+#creators{
+    color:black;
+    font-weight:bold;
+    font-size:16px;
+    padding-left:20px;
+}
+
+#course-name{
+    color:black;
+    font-weight:bold;
+    font-size:10px;
+    padding-left:90px;
+}
